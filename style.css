@@ -77,3 +77,6 @@ input[aria-invalid=true],select[aria-invalid=true],textarea[aria-invalid=true]{b
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
 
 .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+/* Social links, designer credit, and WhatsApp contact */
+.social-footer{margin-top:1.5rem}.social-links{display:flex;flex-wrap:wrap;gap:.65rem;margin:.75rem 0 1rem}.social-links a{display:inline-flex;align-items:center;padding:.45rem .75rem;border:1px solid var(--line);border-radius:999px;text-decoration:none;font-weight:700;font-size:.92rem}.social-links a:hover{background:#e4f3dc}.designer-credit{border-top:1px solid var(--line);margin-top:1.25rem;padding-top:1rem;text-align:center;color:var(--grey);font-size:.93rem}.whatsapp-float{position:fixed;right:1.2rem;bottom:5rem;z-index:1000;display:flex;align-items:center;gap:.45rem;padding:.75rem 1rem;border-radius:999px;background:#168b4b;color:#fff!important;text-decoration:none;font-weight:700;box-shadow:0 6px 20px rgba(0,0,0,.2)}.whatsapp-float span:first-child{font-size:1.25rem}.whatsapp-float:hover{filter:brightness(.95)}@media(max-width:480px){.whatsapp-float{right:.8rem;bottom:4.8rem;padding:.7rem .85rem}.wa-label{font-size:.9rem}}

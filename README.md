@@ -47,3 +47,7 @@ Automated: every internal link and anchor resolves; one H1 per page; JavaScript 
 
 ## Deployment note
 This package is arranged for the current flat GitHub repository: HTML pages, `style.css`, `main.js`, and image files are in the project root. Asset references in the HTML pages and `build.py` have been updated to match. Before launch, replace `https://www.example.com` in `build.py`, generated page canonical/Open Graph URLs, `sitemap.xml`, and `robots.txt` with the final deployed domain.
+
+
+## Contact and social links
+Public contact numbers are +232 77 405 407 and +232 90 773 828. The floating WhatsApp button opens a chat to the primary number (+232 77 405 407). Social links are included in the footer; the YouTube link points to founder Khadison Duwai’s channel, as Overtone SL does not have a separate channel.
