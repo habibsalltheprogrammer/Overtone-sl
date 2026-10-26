@@ -51,3 +51,7 @@ This package is arranged for the current flat GitHub repository: HTML pages, `st
 
 ## Contact and social links
 Public contact numbers are +232 77 405 407 and +232 90 773 828. The floating WhatsApp button opens a chat to the primary number (+232 77 405 407). Social links are included in the footer; the YouTube link points to founder Khadison Duwai’s channel, as Overtone SL does not have a separate channel.
+
+
+## Overflow26 gallery images
+The gallery includes the Overflow worship gathering photo and the nine supplied guest-minister posters for the 6 December 2026 event. Their image files are stored in the project root and referenced by both `gallery.html` and `build.py`.
