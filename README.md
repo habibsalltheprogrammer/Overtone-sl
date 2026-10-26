@@ -55,3 +55,7 @@ Public contact numbers are +232 77 405 407 and +232 90 773 828. The floating Wha
 
 ## Overflow26 gallery images
 The gallery includes the Overflow worship gathering photo and the nine supplied guest-minister posters for the 6 December 2026 event. Their image files are stored in the project root and referenced by both `gallery.html` and `build.py`.
+
+
+## Final Overflow26 image assets
+The following supplied image assets have been added to the root and included in the Gallery page: five guest-minister posters (Selma, Tim Praise, Michael Dauda, Jeremiah Sesay, Simmi), the Khadison Duwai quote graphic, and the team/volunteer meeting flyer. If you edit the site using `build.py`, the Gallery entries are also included in the generator.
