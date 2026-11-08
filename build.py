@@ -3,7 +3,7 @@
 import json
 SITE='https://www.example.com'  # REPLACE with the real domain, then rebuild
 PH1,PH2='+232 77 405 407','+232 90 773 828'
-NAV=[('index.html','Home'),('about.html','About Us'),('founder.html','Our Founder'),('programs.html','Programs'),('initiatives.html','Initiatives'),('events.html','Events'),('gallery.html','Gallery'),('get-involved.html','Get Involved'),('contact.html','Contact Us')]
+NAV=[('index.html','Home'),('about.html','About Us'),('founder.html','Our Founder'),('programs.html','Programs'),('sound-services.html','Sound & Production'),('initiatives.html','Initiatives'),('events.html','Events'),('gallery.html','Gallery'),('get-involved.html','Get Involved'),('contact.html','Contact Us')]
 def ic(p): return f'<svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">{p}</svg>'
 I={'emp':ic('<path d="M12 3v12M7 8l5-5 5 5"/><path d="M4 21h16"/>'),'lead':ic('<path d="M5 21V4l13 5-13 5"/>'),'ment':ic('<circle cx="9" cy="8" r="3"/><circle cx="17" cy="9" r="2.5"/><path d="M3 20c0-3.5 3-6 6-6s6 2.5 6 6M15 14c3 0 6 2 6 5"/>'),
 'skill':ic('<path d="M14 7l3-3 3 3-3 3M4 20l10-10M13 6l5 5-9 9H4v-5z"/>'),'speak':ic('<rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3"/>'),'comm':ic('<path d="M3 11l9-8 9 8v9H3z"/><path d="M10 20v-6h4v6"/>')}
@@ -69,6 +69,7 @@ home=head('Overtone Sierra Leone | Youth Empowerment and Leadership Development'
 <section class="sec dark"><div class="wrap"><h2>Get involved</h2><p>Join the community, volunteer, explore mentorship, partner with Overtone SL, or support its initiatives.</p><div class="row"><a class="btn" href="get-involved.html">Get Involved</a></div></div></section>
 <!-- Testimonials: hidden until verified, real participant stories are supplied. Remove "hidden" to show. -->
 <section class="sec" hidden id="stories"><div class="wrap"><h2>Community stories</h2><div class="grid"><!-- <figure class="card"><blockquote>Quote here</blockquote><figcaption>Name, role (with permission)</figcaption></figure> --></div></div></section>'''+footer()
+home=home.replace('</main>', '<section class="sec dark"><div class="wrap split"><div><p class="tag">Beyond youth development</p><h2>Sound, Stage &amp; Event Production</h2><p>Explore Overtone SL&amp;#39;s sound-system, stage-design and event-production service enquiries.</p></div><div><a class="btn" href="sound-services.html">Explore Production Services</a></div></div></section></main>')
 write('index.html',home)
 # ---------- ABOUT
 vals=[('Integrity','Doing what is right, consistently.'),('Service','Using leadership to lift others.'),('Growth','Learning and improving every day.'),('Creativity','Giving talent room to express itself.'),('Community','Building together, for everyone.')]
@@ -130,6 +131,17 @@ write('get-involved.html',inner('get-involved.html','Get Involved','Get Involved
 # ---------- CONTACT
 ct=sec('<div class="split" style="align-items:start"><div><h2>Contact details</h2><p><strong>Phone</strong><br><a href="tel:+23277405407">'+PH1+'</a><br><a href="tel:+23290773828">'+PH2+'</a></p><p class="quiet">Email, office address and social media links will be added once confirmed.</p><!-- CONFIRM phone numbers; add email, address, social links. Add a map embed only with a verified address. --></div><div><h2>Send a message</h2>'+form('ct',[('general','General enquiry'),('event','Event enquiry')]+OPTS[:-1])+'</div></div>')
 write('contact.html',inner('contact.html','Contact Us','Contact Overtone Sierra Leone','Contact Overtone Sierra Leone by phone or send an enquiry about youth programs, events, mentorship and partnerships.','Contact Us','Reach Overtone Sierra Leone.',ct))
+# ---------- SOUND, STAGE & EVENT PRODUCTION
+sound_services = sec(
+    '<p class="lead">Alongside its youth-development work, Overtone Sierra Leone can present a dedicated service area for sound, stage and event-production enquiries.</p>'
+    '<div class="grid">'
+    '<article class="card"><h3>Sound System</h3><p>Sound-system provision and operation for gatherings, worship experiences, conferences and other events. Equipment specifications and availability should be confirmed for each booking.</p></article>'
+    '<article class="card"><h3>Stage Design &amp; Setup</h3><p>Stage layout, visual presentation and event-stage setup planned around the venue, programme and event requirements.</p></article>'
+    '<article class="card"><h3>Live Sound &amp; Technical Support</h3><p>Technical support for microphones, speakers, audio connections and live-event sound operation, subject to the confirmed production team and equipment.</p></article>'
+    '<article class="card"><h3>Event Production Support</h3><p>Coordinating production requirements and setup details to help events run in an organised and professional way.</p></article>'
+    '</div>', 'alt')
+sound_services += sec('<div class="split"><div><h2>Planning an event?</h2><p>Share your event date, venue, audience size and production needs. The Overtone team can confirm the services, equipment and availability for your event.</p><p class="quiet">Service details, equipment inventory, rates and booking terms should be confirmed by Overtone management before publication.</p></div><div class="statement"><p><strong>Sound. Stage. Experience.</strong></p><p>Production support for meaningful events and memorable experiences.</p><a class="btn" href="contact.html?subject=sound-production">Make a production enquiry</a></div></div>')
+write('sound-services.html',inner('sound-services.html','Sound & Production','Sound System, Stage Design & Event Production | Overtone Sierra Leone','Explore sound-system, stage-design and event-production enquiries with Overtone Sierra Leone.','Sound, Stage & Event Production','Production support for worship experiences, conferences and events.',sound_services))
 # ---------- LEGAL stubs
 for f,n,t in [('privacy.html','Privacy Policy','Draft placeholder: replace with the organisation&rsquo;s approved privacy policy. Messages sent through the forms contain personal details and should be handled securely.'),('terms.html','Terms of Use','Draft placeholder: replace with the organisation&rsquo;s approved terms of use.')]:
     write(f,inner(f,n,f'{n} | Overtone Sierra Leone',f'{n} for the Overtone Sierra Leone website.',n,'Last updated: to be confirmed.',sec(f'<p>{t}</p>')))
