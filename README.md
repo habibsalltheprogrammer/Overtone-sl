@@ -59,9 +59,3 @@ The gallery includes the Overflow worship gathering photo and the nine supplied 
 
 ## Final Overflow26 image assets
 The following supplied image assets have been added to the root and included in the Gallery page: five guest-minister posters (Selma, Tim Praise, Michael Dauda, Jeremiah Sesay, Simmi), the Khadison Duwai quote graphic, and the team/volunteer meeting flyer. If you edit the site using `build.py`, the Gallery entries are also included in the generator.
-
-
-## Sound, stage and event production section
-- `sound-services.html` is a separate page for sound-system, stage-design, live-sound/technical support and event-production enquiries.
-- The page is linked in the main navigation and from the homepage.
-- Service wording is intentionally provisional. Before launch, management should confirm the exact services offered, equipment inventory, technical crew, service area, pricing, booking process and terms. Remove or revise any service that Overtone does not provide directly.
